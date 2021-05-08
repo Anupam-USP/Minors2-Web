@@ -1,0 +1,63 @@
+<head>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<!------ Include the above in your HEAD tag ---------->
+
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+
+<body>
+    <div class="container padding-top">
+        <div class="row">
+            <table id="example" class="table table-striped table-bordered table-hover" style="width:100%">
+                <thead class="thead-dark">
+                    <tr>
+                        <th class="align-center">Roll No.</th>
+                        <th>Name</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <!-- <th>Class</th> -->
+                        <!-- <th>Batch</th> -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <% records.forEach(function(record){ %>
+                        <%if (basis == 1) { %>
+                            <%if (record.Enrollment_No == rollno) { %>
+                                <tr>
+                                    <td class="align-middle"><%= record.Enrollment_No %></td>
+                                    <td><%= record.Name %></td>
+                                    <td><%= record.Date %></td>
+                                    <td><%= record.Time %></td>
+                                    <!-- <td><%= record.Name %></td> -->
+                                    <!-- <td><%= record.Name %></td> -->
+                                </tr>
+                            <% } %> 
+                        <% } %> 
+
+                        <%if (basis == 2) { %>
+                            <%if (record.Date == date) { %>
+                                <tr>
+                                    <td class="align-middle"><%= record.Enrollment_No %></td>
+                                    <td><%= record.Name %></td>
+                                    <td><%= record.Date %></td>
+                                    <td><%= record.Time %></td>
+                                    <!-- <td><%= record.Name %></td> -->
+                                    <!-- <td><%= record.Name %></td> -->
+                                </tr>
+                            <% } %> 
+                        <% } %> 
+
+                                           
+                    <% }); %>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,28 @@
+<%- include("header") -%>
+<body>
+<main class="d-flex align-items-center min-vh-100 py-3 py-md-0">
+    <div class="container">
+        <div class="card login-card">
+            <div class="row no-gutters">
+                <div class="col-md-5">
+                    <img src="/images/login.jpg" alt="login" class="login-card-student">
+                </div>
+                <div class="col-md-7">
+                    <div class="card-body">
+                        <div class="brand-wrapper">
+                            <img src="/images/logo.svg" alt="logo" class="logo">
+                        </div>
+                        <p class="login-card-description">Enter your Id</p>
+                        <form action="/" method="post">
+                            <div class="form-group">
+                                <input type="number" name="rollno" class="form-control" placeholder="Id Number" required>
+                                <button class="btn btn-block login-btn mb-4" type="submit" name="view">View Dashboard</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+</body>

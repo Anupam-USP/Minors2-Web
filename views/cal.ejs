@@ -1,0 +1,58 @@
+<%- include("insidehead") -%>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Datepicker</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+</head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="fonts/icomoon/style.css">
+
+<link rel="stylesheet" href="css/rome.css">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+<!-- Style -->
+<link rel="stylesheet" href="css/admin.css">
+
+<div class="jumbotron" style="padding-top: 5%;text-align: center;">
+    <h1>Select Date</h1>
+</div>
+
+<body>
+<div class="container">
+    <form action="/cal" method="post">
+        <div class="form-group date-format">
+            <div class='input-group date date-bottom' id='datetimepicker1' >
+                <input type='text' name="date" class="form-control " required />
+                <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                </span>            
+            </div>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">View Dashboard</button>
+        </div>
+    </form>
+</div>
+
+<script type="text/javascript">
+    $(function() {
+        $('#datetimepicker1').datetimepicker({format: 'DD-MM-YY'});
+    });
+</script>
+
+</body>

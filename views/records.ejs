@@ -1,0 +1,22 @@
+<h1>Student Records</h1>
+
+<!-- 
+<% if (records) { %>
+    <h2><%= records %></h2>
+<% } %> -->
+
+<ul>
+    <% records.forEach(function(record){ %>
+        <li><%= record.Name %></li>
+        <ul>
+            <% Object.keys(record).forEach(function(key){ %>
+                <li><strong> <%= key %></strong>: <%= record[key] %></li>
+            <% }); %>
+        </ul>
+    <% }); %>
+</ul>            
+
+
+
+
+
